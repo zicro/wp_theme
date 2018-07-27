@@ -1,13 +1,1 @@
-#function to add Style files
-
-function xlion_add_styles(){
-	wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css');
-	wp_enqueue_style('fontawesome-css', get_template_directory_uri().'/css/font-awesome.min.css');
-}
-
-# function to add scripts js file
-
-function xlion_add_scripts(){
-	wp_enqueue_script('bootstrap-js', get_template_directory_uri(). '/js/bootstrap.min.js', array(), false, true);
-	wp_enqueue_script('main-js', get_template_directory_uri(). '/js/main.js', array(), false, true);
-}
+<?php//function to add Style filesfunction xlion_add_styles(){	wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css');	wp_enqueue_style('fontawesome-css', get_template_directory_uri().'/css/font-awesome.min.css');	wp_enqueue_style('main-css', get_template_directory_uri().'/css/main.css');}// function to add scripts js filefunction xlion_add_scripts(){	wp_enqueue_script('bootstrap-js', get_template_directory_uri(). '/js/bootstrap.min.js', array('jquery'), false, true);	wp_enqueue_script('main-js', get_template_directory_uri(). '/js/main.js', array(), false, true);	wp_enqueue_script('html5shiv', get_template_directory_uri(). '/js/html5shiv.js');	wp_script_add_data('html5shiv','conditional','lt IE 9');	wp_enqueue_script('respond', get_template_directory_uri(). '/js/respond.min.js');	wp_script_add_data('respond','conditional','lt IE 9');}// Add Actionsadd_action('wp_enqueue_scripts', 'xlion_add_styles');add_action('wp_enqueue_scripts', 'xlion_add_scripts');?>
