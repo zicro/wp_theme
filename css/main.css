@@ -1,6 +1,10 @@
 body{
 	background-color: #ccc
 }
+.navbar {
+    border-radius: 0;
+    margin-bottom: 10px;
+}
 .nav5{
 	 display: block;
     width: 100%;
@@ -8,65 +12,468 @@ body{
 }
 .footer{
 	background-color: #333;
-	color: #EEE;
-	padding: 20px;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%
+    color: #EEE;
+    padding: 20px;
 }
-.main-post{
+/* Begin index Page */
+
+.home-page .main-post{
 	padding: 10px;
 	background-color: #FFF;
 	border: 1px dashed #d8d8d8;
 	margin-bottom: 10px;
 	border-radius: 5px
 }
-.main-post h3{
+.home-page .main-post h3{
 	margin: 0 0 10px;
 	font-weight: bold;
 	color: #777;
 	letter-spacing: -1px
 }
-.main-post img{
+.home-page .main-post img{
 	display: block;
 	margin: 10px 0 10px
 }
-.main-post .post-author,
-.main-post .post-date,
-.main-post .post-comments{
+.home-page .main-post .post-author,
+.home-page .main-post .post-date,
+.home-page .main-post .post-comments{
 	font-size: 12px
 }
-.main-post .post-content{
+.home-page .main-post .post-content{
 	line-height: 1.7;
 	color: #888
 }
-.main-post i{
+.home-page .main-post i{
 	color: #999
 }
-.post-pagination{
+.home-page .post-pagination{
 	margin: 20px auto 30px;
 	width: 400px;
 	text-align: center
 }
-.post-pagination a,
-.post-pagination span{
+.home-page .post-pagination a,
+.home-page .post-pagination span{
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: #fff;
 	border-radius: 5px
 }
 
-.post-pagination a:first-of-type{
+.home-page .post-pagination a:first-of-type{
 	margin-right: 10px
 }
-.post-pagination span{
+.home-page .post-pagination span{
 	opacity: .5;
 	cursor: not-allowed
 }
-.post-pagination .prev-span{
+.home-page .post-pagination .prev-span{
 	margin-right: 10px
 }
-.post-pagination .next-span{
+.home-page .post-pagination .next-span{
 	margin-left: 0px
 }
+/* End index Page */
+
+/* Begin Single Page */
+.post-page .main-post{
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px dashed #d8d8d8;
+	margin-bottom: 10px;
+	border-radius: 5px
+}
+.post-page .main-post h3{
+	margin: 0 0 10px;
+	font-weight: bold;
+	color: #777;
+	letter-spacing: -1px
+}
+.post-page .main-post img{
+	display: block;
+	margin: 10px 0 10px
+}
+.post-page .main-post .post-author,
+.post-page .main-post .post-date,
+.post-page .main-post .post-comments{
+	font-size: 12px
+}
+.post-page .main-post .post-content{
+	line-height: 1.9;
+	color: #666
+}
+.post-page .main-post i{
+	color: #999
+}
+.post-page .post-pagination{
+	margin: 0 auto 15px;
+    overflow: hidden;
+    text-align: center;
+}
+.post-page .post-pagination a,
+.post-page .post-pagination span{
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 5px
+}
+
+.post-page .post-pagination a:first-of-type{
+	float: left;
+}
+.post-page .post-pagination a:last-child{
+	float: right;
+}
+.post-page .post-pagination span{
+	opacity: .5;
+	cursor: not-allowed
+}
+.post-page .post-pagination .prev-span{
+	margin-right: 10px
+}
+.post-page .post-pagination .next-span{
+	margin-left: 0px
+}
+.post-page .main-post{
+	position: relative
+}
+.post-page .main-post .post-edit-link{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	background-color: #EEE;
+	border-radius: 0 0 0 10px
+}
+.post-page .comment-separator{
+	border-bottom: 4px dashed #dcdcdc
+}
+/* End Single Page */
+
+/* Start comment List */
+
+.comments-list ul,
+.comments-list ol{
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+
+
+
+.comments-list .comment img{
+	padding: 3px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	margin-right: 5px;
+	margin-bottom: 5px
+}
+
+.comments-list .comment .comment-meta{
+	font-size: 12px;
+	color: #777
+}
+
+.comments-list .comment p{
+	margin-top: 8px;
+	color: #6f6f6f
+}
+
+.comments-list .comment .says{
+	display: none
+}
+
+.comments-list > .comment{
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #DDD;
+	margin-bottom: 15px
+}
+
+.comments-list > .comment .children > .comment{
+	padding: 10px;
+	background-color: #eee;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+}
+
+.comments-list > .comment .children > .comment .comment{
+	padding: 10px;
+	background-color: #DDD;
+	margin-top: 10px;
+	border: 1px solid #AAA;
+}
+
+.comment-respond label{
+	display: block
+}
+/* end comment List */
+/* Start comment form */
+.comment-respond input[type="text"],
+.comment-respond textarea {
+	height: 40px;
+	width: 500px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 5px
+}
+
+.comment-respond textarea {
+	height: 200px;
+	resize: none
+}
+.comment-respond input[type="submit"] {
+    margin-top: 6px;
+}
+/* end comment form */
+/* Start  author info */
+.author-info h4{
+	margin: 12px 0 10px 0;
+	font-weight: bold;
+	color: #676767;
+	font-size: 26px
+}
+
+.author-info .nickname{
+	color: #f00;
+	font-size: 14px
+}
+
+.author-info p{
+	font-size: 14px;
+	line-height: 1.5;
+	color: #777
+}
+
+/* end  author info */
+
+/* start  author Page */
+.author-page .profile-header{
+	font-size: 60px;
+	margin: 30px 0;
+	color: #666;
+	font-weight: bold;
+	letter-spacing: .3px
+}
+
+.author-page .author-main-info{
+	background-color: #fff;
+	padding: 20px;
+	font-size: 18px;
+	border: 1xp solid #dedede;
+	margin-bottom: 20px
+}
+
+.author-main-info p{
+	color: #777;
+	line-height: 1.6;
+	letter-spacing: 1px
+}
+
+.author-page .author-stats .stats{
+	background-color: #fff;
+	padding: 20px;
+	font-size: 14px;
+	border: 1xp solid #dedede;
+	margin-bottom: 20px;
+	text-align: center
+}
+
+.author-page .author-stats .stats span{
+	display: block;
+	font-size: 50px;
+	margin-top: 10px
+}
+/* end  author Page */
+
+.author-page .author-posts-title{
+	margin: 0 0 20px;
+	background-color: #e2e2e2;
+	padding: 20px 30px;
+	font-weight: bold;
+	color: #717171
+}
+
+.author-page .author-posts {
+	padding: 20px;
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 20px;
+	border: 1px solid #e4e4e4;
+}
+
+.author-page .author-posts img{
+	width: 160px
+}
+
+.author-page .author-posts h3{
+	margin: 10px 0 5px;
+	font-weight: bold
+}
+
+.author-page .author-posts .post-date,
+.author-page .author-posts .post-comments {
+	font-size: 12px;
+	color: #888
+}
+
+.author-page .author-comments{
+	padding: 10px 20px;
+	background-color: #fff;
+	margin-bottom: 15px;
+	border: 1px solid #e4e4e4;
+}
+
+.author-page .author-comments h3{
+	margin: 5px 0;
+}
+
+.author-page .author-comments .post-date{
+	font-size: 12px;
+	color: #888;
+}
+
+.author-page .author-comments .post-content{
+	color: #6b6b6b;
+	margin-top: 5px
+}
+
+.author-page .author-comments .post-content p{
+	margin: 0
+}
+
+.pagination-numbers{
+	margin: 5px auto 25px;
+	font-family: Tahoma, Arial;
+	font-size: 16px
+}
+
+.pagination-numbers .page-numbers{
+	display: inline-block;
+	background-color: #8e8e8e;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.pagination-numbers .page-numbers.current{
+	background-color: #2980b9
+}
+
+.pagination-numbers .page-numbers:hover{
+	text-decoration: none;
+	background-color: #2980b9
+}
+
+.page-not-found img{
+	margin-top: 50px
+}
+
+.page-not-found h1{
+	font-weight: bold;
+	font-size: 70px;
+	color: #777;
+	letter-spacing: -3px;
+	margin-bottom: 20px
+}
+
+.page-not-found .lead{
+	font-size: 35px;
+	color: #909090;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin-bottom: 40px
+}
+
+.post-page .bypostauthor{
+	position: relative;
+}
+
+.post-page .bypostauthor:after{
+	content: 'author';
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #ccc
+}
+
+.category-information{
+	background-color: #fff;
+	margin: 25px 15px;
+	border: 1px solid #d8d8d8
+}
+
+.category-information h1{
+	margin: 20px 0;
+	font-weight: bold;
+	color: #9c9c9c
+}
+
+.category-information .category-description p{
+	font-size: 18px;
+	color: #777;
+	line-height: 80px;
+	margin:0
+}
+
+.category-information .cat-stats{
+	line-height: 80px;
+	color: #090909
+}
+
+/* Start unc Category */
+.linux-category .post-title{
+	margin-top: 30px !important;
+}
+
+.linux-category .post-content{
+	margin-top: 8px
+}
+
+.sidebar-linux{
+
+}
+
+.sidebar-linux .widget{
+	background-color: #FFF;
+	border: 1px solid #d8d8d8;
+	margin-bottom: 15px
+	
+}
+
+.sidebar-linux .widget-title{
+	margin: 0;
+	padding: 10px;
+	background-color: #42a4d0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold
+	
+}
+
+.sidebar-linux .widget-content{
+	padding: 10px;
+	color: #969696
+}
+/* End unc Category */
+
+/* Start BreadCrumb  */
+
+.breadcrumbs-holder {
+	background-color: #f5f5f5;
+	margin-bottom: 10px
+}
+
+.breadcrumbs-holder .breadcrumb {
+	margin-bottom: 0;
+	padding: 15px
+
+}
+
+/* End BreadCrumb  */

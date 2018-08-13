@@ -1,9 +1,28 @@
 <?php
 get_header();
 ?>
-
+only for it 
 <div class="container home-page">
 	<div class="row">
+				<div class="category-information text-center ">
+			<div class="col-md-4">
+				<h1 class="category-title"><?php single_cat_title(); ?></h1>
+			</div>
+			<div class="col-md-4">
+				<p class="category-description"><?php echo category_description(); ?></p>
+			</div>
+			<div class="col-md-4">
+				<div class="cat-stats">
+					<span>Articles Count : 00</span>
+					<span>Comments Count : 00</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="row">
+<div class="col-md-9">
+
 	<?php
 		if (have_posts()) {
 			while (have_posts()) {
@@ -61,10 +80,24 @@ get_header();
 				?>
 		</div>
 	</div>
-		<div class="pagination-numbers">
+		<div class="col-md-3">
+			<div class="unc-sidebar">
+			<?php
+				/*if (is_active_sidebar('main-sidebar')) {
+					dynamic_sidebar('main-sidebar');
+				}*/
+
+				get_sidebar('unc');
+			?>
+			</div>
+		</div>	
+	</div> <!-- End row -->
+	
+	<div class="pagination-numbers">
 			<?php echo numbering_pagination(); ?>
 		</div>
 </div>
 <?php
 get_footer();
 ?>
+
